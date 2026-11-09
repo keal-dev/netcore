@@ -1,0 +1,29 @@
+# Archivos compilados
+bin/
+obj/
+
+# Publicación
+publish/
+
+# Configuraciones locales
+appsettings.Development.json
+appsettings.Production.json
+
+# Secretos y credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Visual Studio Code
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
