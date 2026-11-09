@@ -24,6 +24,19 @@ public class UsuariosController : ControllerBase
         return Ok(usuarios);
     }
 
+    [HttpGet("{id}")]
+    public async Task<IActionResult> ObtenerUsuarioPorId(int id)
+    {
+        var usuario = await _context.Usuarios.FindAsync(id);
+
+        if (usuario == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(usuario);
+    }
+
     [HttpPost]
     public async Task<IActionResult> CrearUsuario(Usuario usuario)
     {
